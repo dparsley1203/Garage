@@ -3,15 +3,25 @@ using System.Collections.Generic;
 
 namespace Garage
 {
-    public class Zero : Vehicle  // Electric motorcycle
+    public class Zero : Vehicle, IElectricVehicle  // Electric motorcycle
     {
         public double BatteryKWh { get; set; }
+
+        public string Name { get; set; }
 
 
         public void ChargeBattery()
         {
+            CurrentChargePercentage = 100;
             // method definition omitted
         }
+
+        // public void CurrentChargePercentage()
+        // {
+
+        // }
+
+        public int CurrentChargePercentage { get; set; } = 64;
 
         public override void Drive()
         {
