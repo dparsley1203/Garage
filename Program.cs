@@ -46,9 +46,10 @@ namespace Garage
 
             Ram ram = new Ram();
             Cessna cessna150 = new Cessna();
+            Alumacraft fastcraft = new Alumacraft() { propellerType = "Stubbie" };
 
             List<IGasVehicle> gasVehicles = new List<IGasVehicle>() {
-                ram, cessna150, truck
+                ram, cessna150, truck, fastcraft
               };
 
             Console.WriteLine("Gas Vehicles");
